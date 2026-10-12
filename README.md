@@ -31,12 +31,18 @@ The import name is `google_ads_sdk`.
 from google_ads_sdk import ClickConversion, ConversionsClient
 
 client = ConversionsClient(
-    developer_token="...", oauth_client_id="...", oauth_client_secret="...",
-    refresh_token="...", customer_id="1234567890",
+    developer_token="...",
+    oauth_client_id="...",
+    oauth_client_secret="...",
+    refresh_token="...",
+    customer_id="1234567890",
 )
 conversion = ClickConversion(
-    conversion_action_id="9876543210", conversion_date_time="2026-04-19 14:30:00+00:00",
-    conversion_value=200.0, currency_code="EUR", gclid="...",
+    conversion_action_id="9876543210",
+    conversion_date_time="2026-04-19 14:30:00+00:00",
+    conversion_value=200.0,
+    currency_code="EUR",
+    gclid="...",
 )
 result = client.upload_click_conversions([conversion])
 print(result.successes, result.failures)
